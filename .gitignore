@@ -1,0 +1,21 @@
+# Python bytecode
+*.py[cod]
+*$py.class
+__pycache__/
+
+# Django local configurations and secrets
+.env
+db.sqlite3
+media/
+staticfiles/
+*.log
+
+# IDE specific files
+.vscode/
+.idea/
+.project
+.pydevproject
+
+# OS generated files
+Thumbs.db
+Desktop.ini

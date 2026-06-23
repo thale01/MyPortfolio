@@ -1,0 +1,965 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block title %}Siddhi Thale | Full Stack Developer | Django Specialist & Freelancer{% endblock %}
+
+{% block content %}
+
+<!-- BACKGROUND GLOW EFFECTS -->
+<div class="glow-blob" style="top: 15%; left: 5%;"></div>
+<div class="glow-blob" style="top: 45%; right: 5%; width: 400px; height: 400px;"></div>
+<div class="glow-blob" style="top: 75%; left: 10%;"></div>
+
+<!-- ==========================================
+     1. HOME SECTION
+     ========================================== -->
+<section id="home">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 home-content reveal">
+                <div class="mb-3">
+                    <span class="badge-status" id="freelance-badge">
+                        <span class="badge-pulse"></span> Available for Freelance & Open to Work
+                    </span>
+                </div>
+                <h5 class="text-uppercase text-gradient font-heading fw-bold mb-2">Welcome to my space</h5>
+                <h1 class="home-title">Hi, I am <br><span class="text-gradient">Siddhi Thale</span></h1>
+                
+                <!-- Typing Loop -->
+                <div class="home-subtitle">
+                    <span class="typed-text"></span><span class="cursor" style="display: inline-block; background-color: var(--accent-purple); margin-left: 3px; width: 3px; animation: blink 1s infinite;">&nbsp;</span>
+                </div>
+                <style>
+                    .cursor.typing { animation: none; }
+                    @keyframes blink {
+                        0%, 100% { opacity: 1; }
+                        50% { opacity: 0; }
+                    }
+                </style>
+
+                <p class="text-muted fs-5 mb-4 max-width-500">
+                    Building scalable web applications, business websites, e-learning platforms, and custom web solutions using Django, React.js, and modern web technologies.
+                </p>
+                
+                <div class="d-flex flex-wrap gap-3">
+                    <a href="#contact" class="btn-premium" id="home-btn-contact">
+                        <i class="fa-solid fa-paper-plane"></i> Contact Me
+                    </a>
+                    <a href="#resume" class="btn-glass" id="home-btn-resume">
+                        <i class="fa-solid fa-file-arrow-down"></i> View Resume
+                    </a>
+                </div>
+                
+                <!-- Social Channels -->
+                <div class="home-socials">
+                    <a href="https://github.com" target="_blank" class="social-btn" id="home-social-github" title="GitHub">
+                        <i class="fa-brands fa-github fa-lg"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" class="social-btn" id="home-social-linkedin" title="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in fa-lg"></i>
+                    </a>
+                    <a href="mailto:siddhithale01@gmail.com" class="social-btn" id="home-social-email" title="Email">
+                        <i class="fa-solid fa-envelope fa-lg"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 home-img-wrapper reveal">
+                <!-- Antigravity Canvas Container -->
+                <div id="antigravity-container" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 0; pointer-events: none;"></div>
+                
+                <div class="profile-glow-ring"></div>
+                <div class="home-img-bg"></div>
+                <div class="profile-frame-container">
+                    <img src="{% static 'images/profile.png' %}" alt="Siddhi Thale Professional Developer Avatar" class="home-img img-fluid">
+                    
+                    <!-- Floating Interactive Badges -->
+                    <div class="floating-badge badge-top-right">
+                        <i class="fa-solid fa-code text-gradient"></i>
+                        <span>Full Stack Developer</span>
+                    </div>
+                    <div class="floating-badge badge-bottom-left">
+                        <i class="fa-brands fa-python text-gradient"></i>
+                        <span>Django Specialist</span>
+                    </div>
+                    <div class="floating-badge badge-bottom-right">
+                        <span class="pulse-dot"></span>
+                        <span>Open to Work</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================
+     2. ABOUT SECTION
+     ========================================== -->
+<section id="about">
+    <div class="container">
+        <div class="section-title reveal">
+            <h5 class="text-uppercase text-gradient fw-bold">Who I Am</h5>
+            <h2>About Me</h2>
+            <div class="w-100 d-flex justify-content-center"><hr style="width: 60px; height: 4px; background: var(--gradient-primary); border: none; border-radius: 2px;"></div>
+        </div>
+        
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0 reveal">
+                <div class="glass-card">
+                    <h3 class="mb-3 font-heading fw-bold">Passionate Full Stack Developer</h3>
+                    <p class="text-muted mb-3 fs-6">
+                        I am pursuing a **B.Tech in Computer Science** (2022 – 2026) and specialize in designing, developing, and deploying fully responsive web solutions. My core skill set centers on <strong>Django</strong>, <strong>React.js</strong>, <strong>Python</strong>, <strong>JavaScript</strong>, and <strong>MySQL</strong>.
+                    </p>
+                    <p class="text-muted mb-4 fs-6">
+                        I enjoy building scalable backend systems, secure REST APIs, clean database designs, and interactive modern user interfaces. Beyond software engineering, I actively provide freelancer services to support startups, institutes, and local businesses in growing their digital presence.
+                    </p>
+                    
+                    <div class="d-flex align-items-center gap-3">
+                        <span class="fs-1 fw-bold text-gradient font-heading">4+</span>
+                        <div>
+                            <h6 class="mb-0 fw-bold">Years of Study</h6>
+                            <small class="text-muted">Rigorous CS concepts & practices</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 reveal">
+                <div class="glass-card h-100 d-flex flex-column justify-content-center">
+                    <h4 class="mb-4 font-heading fw-bold"><i class="fa-solid fa-circle-check text-gradient me-2"></i>What I Specialize In</h4>
+                    
+                    <div class="d-flex flex-column gap-3 mb-4">
+                        <div class="d-flex gap-3">
+                            <div class="contact-info-icon"><i class="fa-brands fa-python"></i></div>
+                            <div>
+                                <h6 class="mb-1 fw-bold">Backend Architecture</h6>
+                                <p class="text-muted mb-0 small">Highly secure REST APIs, custom workflows, and database indexing.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-3">
+                            <div class="contact-info-icon"><i class="fa-solid fa-layer-group"></i></div>
+                            <div>
+                                <h6 class="mb-1 fw-bold">Full Stack Integration</h6>
+                                <p class="text-muted mb-0 small">Connecting responsive React.js frontends with fast Django database backends.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-3">
+                            <div class="contact-info-icon"><i class="fa-solid fa-handshake"></i></div>
+                            <div>
+                                <h6 class="mb-1 fw-bold">Freelance Collaboration</h6>
+                                <p class="text-muted mb-0 small">On-time solutions, custom e-learning platforms, and continuous maintainability.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================
+     3. SKILLS SECTION
+     ========================================== -->
+<section id="skills">
+    <div class="container">
+        <div class="section-title reveal">
+            <h5 class="text-uppercase text-gradient fw-bold">What I Work With</h5>
+            <h2>My Core Skills</h2>
+            <div class="w-100 d-flex justify-content-center"><hr style="width: 60px; height: 4px; background: var(--gradient-primary); border: none; border-radius: 2px;"></div>
+        </div>
+        
+        <div class="row g-4">
+            <!-- Frontend -->
+            <div class="col-md-6 col-lg-4 reveal">
+                <div class="glass-card h-100">
+                    <h4 class="skills-category-title"><i class="fa-solid fa-laptop-code"></i> Frontend Development</h4>
+                    
+                    <!-- HTML5 -->
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">HTML5</span>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="skill-progress-bar">
+                            <div class="skill-progress-fill" data-percent="95%"></div>
+                        </div>
+                    </div>
+                    <!-- CSS3 -->
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">CSS3</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-progress-bar">
+                            <div class="skill-progress-fill" data-percent="90%"></div>
+                        </div>
+                    </div>
+                    <!-- JavaScript -->
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">JavaScript</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-progress-bar">
+                            <div class="skill-progress-fill" data-percent="85%"></div>
+                        </div>
+                    </div>
+                    <!-- React.js -->
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">React.js</span>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="skill-progress-bar">
+                            <div class="skill-progress-fill" data-percent="80%"></div>
+                        </div>
+                    </div>
+                    <!-- Bootstrap -->
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Bootstrap 5</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-progress-bar">
+                            <div class="skill-progress-fill" data-percent="90%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Backend & Database -->
+            <div class="col-md-6 col-lg-4 reveal">
+                <div class="glass-card h-100">
+                    <h4 class="skills-category-title"><i class="fa-solid fa-server"></i> Backend & Database</h4>
+                    
+                    <!-- Python -->
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Python</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-progress-bar">
+                            <div class="skill-progress-fill" data-percent="90%"></div>
+                        </div>
+                    </div>
+                    <!-- Django -->
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Django</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-progress-bar">
+                            <div class="skill-progress-fill" data-percent="90%"></div>
+                        </div>
+                    </div>
+                    <!-- REST APIs -->
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">REST APIs</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-progress-bar">
+                            <div class="skill-progress-fill" data-percent="85%"></div>
+                        </div>
+                    </div>
+                    <!-- MySQL -->
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">MySQL</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-progress-bar">
+                            <div class="skill-progress-fill" data-percent="85%"></div>
+                        </div>
+                    </div>
+                    <!-- Django ORM -->
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Django ORM</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-progress-bar">
+                            <div class="skill-progress-fill" data-percent="90%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tools & Professional Skills -->
+            <div class="col-md-12 col-lg-4 reveal">
+                <div class="glass-card h-100">
+                    <h4 class="skills-category-title"><i class="fa-solid fa-screwdriver-wrench"></i> Tools & Soft Skills</h4>
+                    
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-12">
+                            <h6 class="text-gradient fw-bold mb-3">Development Tools</h6>
+                            <div class="d-flex flex-wrap gap-2 mb-4">
+                                <span class="tech-badge"><i class="fa-brands fa-git-alt"></i> Git</span>
+                                <span class="tech-badge"><i class="fa-brands fa-github"></i> GitHub</span>
+                                <span class="tech-badge"><i class="fa-solid fa-terminal"></i> VS Code</span>
+                                <span class="tech-badge"><i class="fa-solid fa-code"></i> PyCharm</span>
+                                <span class="tech-badge"><i class="fa-solid fa-database"></i> MySQL Workbench</span>
+                                <span class="tech-badge"><i class="fa-solid fa-robot"></i> GitHub Copilot</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-12">
+                            <h6 class="text-gradient fw-bold mb-3">Soft Skills</h6>
+                            
+                            <!-- Communication -->
+                            <div class="skill-item mb-2">
+                                <div class="skill-info">
+                                    <span class="skill-name">Communication</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-progress-bar">
+                                    <div class="skill-progress-fill" data-percent="90%"></div>
+                                </div>
+                            </div>
+                            <!-- Leadership -->
+                            <div class="skill-item mb-2">
+                                <div class="skill-info">
+                                    <span class="skill-name">Leadership</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-progress-bar">
+                                    <div class="skill-progress-fill" data-percent="85%"></div>
+                                </div>
+                            </div>
+                            <!-- Problem Solving -->
+                            <div class="skill-item mb-0">
+                                <div class="skill-info">
+                                    <span class="skill-name">Problem Solving</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-progress-bar">
+                                    <div class="skill-progress-fill" data-percent="90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================
+     4. SERVICES SECTION
+     ========================================== -->
+<section id="services">
+    <div class="container">
+        <div class="section-title reveal">
+            <h5 class="text-uppercase text-gradient fw-bold">My Offerings</h5>
+            <h2>Freelance Web Development Services</h2>
+            <p>Helping businesses and individuals build modern, scalable web solutions.</p>
+            <div class="w-100 d-flex justify-content-center"><hr style="width: 60px; height: 4px; background: var(--gradient-primary); border: none; border-radius: 2px;"></div>
+        </div>
+        
+        <div class="row g-4">
+            <!-- 1. Business Website Development -->
+            <div class="col-md-6 col-lg-4 reveal">
+                <div class="glass-card h-100">
+                    <div class="service-icon-box" id="service-icon-1">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <h4 class="fw-bold mb-3">Business Website</h4>
+                    <p class="text-muted small mb-0">Establish your online presence with highly polished, functional websites tailored to reflect your corporate branding.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-circle-play"></i> Company websites</li>
+                        <li><i class="fa-solid fa-circle-play"></i> Portfolio websites</li>
+                        <li><i class="fa-solid fa-circle-play"></i> Landing pages</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 2. E-Learning Solutions -->
+            <div class="col-md-6 col-lg-4 reveal">
+                <div class="glass-card h-100">
+                    <div class="service-icon-box" id="service-icon-2">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h4 class="fw-bold mb-3">E-Learning Solutions</h4>
+                    <p class="text-muted small mb-0">Custom digital schoolrooms, student hubs, lecture uploads, and easy resources trackers built using robust Django models.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-circle-play"></i> Student management</li>
+                        <li><i class="fa-solid fa-circle-play"></i> Online class portals</li>
+                        <li><i class="fa-solid fa-circle-play"></i> Lectures & Notes tracking</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 3. E-Commerce Development -->
+            <div class="col-md-6 col-lg-4 reveal">
+                <div class="glass-card h-100">
+                    <div class="service-icon-box" id="service-icon-3">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                    <h4 class="fw-bold mb-3">E-Commerce Development</h4>
+                    <p class="text-muted small mb-0">Safe and speedy digital stores featuring user-friendly dashboards, easy checkout processes, and optimized database queries.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-circle-play"></i> Online grocery / retail stores</li>
+                        <li><i class="fa-solid fa-circle-play"></i> Shopping cart & Checkout</li>
+                        <li><i class="fa-solid fa-circle-play"></i> Inventory management</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 4. Custom Django Applications -->
+            <div class="col-md-6 col-lg-6 col-xl-4 reveal">
+                <div class="glass-card h-100">
+                    <div class="service-icon-box" id="service-icon-4">
+                        <i class="fa-brands fa-python"></i>
+                    </div>
+                    <h4 class="fw-bold mb-3">Custom Django Apps</h4>
+                    <p class="text-muted small mb-0">High-performance CRM systems, complex databases, custom admin screens, and automated internal business software portals.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-circle-play"></i> Dynamic Admin dashboards</li>
+                        <li><i class="fa-solid fa-circle-play"></i> Client / Student CRM portals</li>
+                        <li><i class="fa-solid fa-circle-play"></i> Secure database operations</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 5. Website Maintenance -->
+            <div class="col-md-12 col-lg-6 col-xl-8 reveal">
+                <div class="glass-card h-100">
+                    <div class="row align-items-center">
+                        <div class="col-lg-5">
+                            <div class="service-icon-box" id="service-icon-5">
+                                <i class="fa-solid fa-screwdriver-wrench"></i>
+                            </div>
+                            <h4 class="fw-bold mb-3">Website Maintenance</h4>
+                            <p class="text-muted small mb-0 mb-lg-0">Ensuring your active web properties remain bug-free, performant, and fully operational for a premium user experience.</p>
+                        </div>
+                        <div class="col-lg-7 mt-3 mt-lg-0">
+                            <ul class="service-list row g-2">
+                                <div class="col-sm-6">
+                                    <li><i class="fa-solid fa-circle-play"></i> Debugging & Fixes</li>
+                                    <li><i class="fa-solid fa-circle-play"></i> Load speed optimizations</li>
+                                </div>
+                                <div class="col-sm-6">
+                                    <li><i class="fa-solid fa-circle-play"></i> New feature integration</li>
+                                    <li><i class="fa-solid fa-circle-play"></i> Responsive audits & support</li>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================
+     WHY HIRE ME SECTION
+     ========================================== -->
+<section id="why-hire-me" style="background: rgba(4, 6, 18, 0.45); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5 mb-5 mb-lg-0 reveal">
+                <h5 class="text-uppercase text-gradient fw-bold">Why Hire Me</h5>
+                <h2 class="mb-4 font-heading fw-bold fs-1">Delivering High-Quality Web Solutions</h2>
+                <p class="text-muted mb-4">
+                    My objective is to build modern systems that help businesses, institutes, and individuals transition online smoothly. I align functional database engineering with flawless glassmorphism frontend patterns to secure visitor trust.
+                </p>
+                <a href="#contact" class="btn-premium" id="hire-btn-contact"><i class="fa-solid fa-comments"></i> Let's Discuss Your Project</a>
+            </div>
+            
+            <div class="col-lg-7 reveal">
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        <div class="feature-item">
+                            <div class="feature-icon-wrapper"><i class="fa-solid fa-check"></i></div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Full Stack Developer</h6>
+                                <small class="text-muted">Handles both robust database algorithms and glowing styles.</small>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon-wrapper"><i class="fa-solid fa-check"></i></div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Django Specialist</h6>
+                                <small class="text-muted">Secure, fast, and structured Python configurations.</small>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon-wrapper"><i class="fa-solid fa-check"></i></div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Clean & Readable Code</h6>
+                                <small class="text-muted">Maintainable file configurations for long-term scale.</small>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon-wrapper"><i class="fa-solid fa-check"></i></div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Responsive Design</h6>
+                                <small class="text-muted">Optimized screen rendering on Mobile, Tablet, and Desktop.</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-6">
+                        <div class="feature-item">
+                            <div class="feature-icon-wrapper"><i class="fa-solid fa-check"></i></div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Fast Delivery</h6>
+                                <small class="text-muted">Rapid prototyping aligned strictly with sprint timelines.</small>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon-wrapper"><i class="fa-solid fa-check"></i></div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Scalable Solutions</h6>
+                                <small class="text-muted">Database schemas optimized for massive transactional logs.</small>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon-wrapper"><i class="fa-solid fa-check"></i></div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Client-Focused</h6>
+                                <small class="text-muted">Aligning technical milestones with practical business targets.</small>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon-wrapper"><i class="fa-solid fa-check"></i></div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Long-Term Support</h6>
+                                <small class="text-muted">Comprehensive debugging, updates, and maintenance support.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================
+     5. PROJECTS SECTION
+     ========================================== -->
+<section id="projects">
+    <div class="container">
+        <div class="section-title reveal">
+            <h5 class="text-uppercase text-gradient fw-bold">My Portfolio</h5>
+            <h2>Featured Projects</h2>
+            <div class="w-100 d-flex justify-content-center"><hr style="width: 60px; height: 4px; background: var(--gradient-primary); border: none; border-radius: 2px;"></div>
+        </div>
+        
+        <div class="row g-4 justify-content-center">
+            {% for project in projects %}
+            <div class="col-md-6 col-lg-4 reveal">
+                <div class="glass-card project-card d-flex flex-column h-100" id="project-card-{{ project.id }}">
+                    <div class="project-img-container mb-3">
+                        {% if project.image %}
+                            <img src="{{ project.image.url }}" alt="{{ project.title }} Screenshot" class="project-img">
+                        {% else %}
+                            <!-- Load generated asset fallback -->
+                            {% if project.title == "AS-Mart – Online Grocery Shop" %}
+                                <img src="{% static 'images/proj_asmart.png' %}" alt="{{ project.title }} UI mockup" class="project-img">
+                            {% elif "Ideal Classes" in project.title %}
+                                <div id="carouselIdeal" class="carousel slide h-100" data-bs-ride="carousel">
+                                    <div class="carousel-inner h-100">
+                                        <div class="carousel-item active h-100">
+                                            <img src="{% static 'images/proj_ideal_1.png' %}" alt="Ideal Classes Dashboard" class="project-img d-block w-100 h-100" style="object-fit: cover;">
+                                        </div>
+                                        <div class="carousel-item h-100">
+                                            <img src="{% static 'images/proj_ideal_2.png' %}" alt="Ideal Classes Admissions" class="project-img d-block w-100 h-100" style="object-fit: cover;">
+                                        </div>
+                                        <div class="carousel-item h-100">
+                                            <img src="{% static 'images/proj_ideal_3.png' %}" alt="Ideal Classes Manage Notes" class="project-img d-block w-100 h-100" style="object-fit: cover;">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselIdeal" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselIdeal" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            {% elif "Amazon" in project.title %}
+                                <div id="carouselAmazon" class="carousel slide h-100" data-bs-ride="carousel">
+                                    <div class="carousel-inner h-100">
+                                        <div class="carousel-item active h-100">
+                                            <img src="{% static 'images/proj_amazon_1.png' %}" alt="Amazon Clone Header" class="project-img d-block w-100 h-100" style="object-fit: cover;">
+                                        </div>
+                                        <div class="carousel-item h-100">
+                                            <img src="{% static 'images/proj_amazon_2.png' %}" alt="Amazon Clone Footer" class="project-img d-block w-100 h-100" style="object-fit: cover;">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselAmazon" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselAmazon" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            {% else %}
+                                <div class="d-flex align-items-center justify-content-center h-100 bg-secondary-subtle rounded text-muted">
+                                    <i class="fa-solid fa-laptop-code fa-3x"></i>
+                                </div>
+                            {% endif %}
+                        {% endif %}
+                    </div>
+                    
+                    <h4 class="fw-bold font-heading mb-2">{{ project.title }}</h4>
+                    <p class="text-muted small flex-grow-1">{{ project.description }}</p>
+                    
+                    <div class="tech-badges-list">
+                        {% for tech in project.get_tech_list %}
+                            <span class="tech-badge">{{ tech }}</span>
+                        {% endfor %}
+                    </div>
+                    
+                    <div class="d-flex gap-2 mt-auto">
+                        {% if project.github_link %}
+                            <a href="{{ project.github_link }}" target="_blank" class="btn-glass py-2 px-3 fs-7 flex-fill text-center justify-content-center" id="project-github-{{ project.id }}">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
+                        {% endif %}
+                        {% if project.live_link %}
+                            {% if "Ideal Classes" in project.title %}
+                                <a href="https://ideal-classes.onrender.com" target="_blank" class="btn-premium py-2 px-3 fs-7 flex-fill text-center justify-content-center" id="project-demo-{{ project.id }}">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                                </a>
+                            {% else %}
+                                <a href="{{ project.live_link }}" target="_blank" class="btn-premium py-2 px-3 fs-7 flex-fill text-center justify-content-center" id="project-demo-{{ project.id }}">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                                </a>
+                            {% endif %}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <!-- Seed data fallback in case user hasn't run the seeder yet -->
+            <div class="col-md-6 col-lg-4 reveal">
+                <div class="glass-card project-card d-flex flex-column h-100" id="project-card-asmart-fallback">
+                    <div class="project-img-container mb-3">
+                        <img src="{% static 'images/proj_asmart.png' %}" alt="AS-Mart Groceries App Preview" class="project-img">
+                    </div>
+                    <h4 class="fw-bold font-heading mb-2">AS-Mart – Online Grocery Shop</h4>
+                    <p class="text-muted small flex-grow-1">Developed a full-stack e-commerce grocery shop using Django with secure customer registration, order placement, shopping cart flow, optimized SQLite/MySQL queries, and custom admin dashboard views.</p>
+                    <div class="tech-badges-list">
+                        <span class="tech-badge">Django</span>
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">MySQL</span>
+                        <span class="tech-badge">HTML/CSS</span>
+                        <span class="tech-badge">JavaScript</span>
+                    </div>
+                    <div class="d-flex gap-2 mt-auto">
+                        <a href="https://github.com" target="_blank" class="btn-glass py-2 px-3 fs-7 flex-fill text-center justify-content-center" id="project-github-asmart-fallback"><i class="fa-brands fa-github"></i> GitHub</a>
+                        <a href="https://github.com" target="_blank" class="btn-premium py-2 px-3 fs-7 flex-fill text-center justify-content-center" id="project-demo-asmart-fallback"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4 reveal">
+                <div class="glass-card project-card d-flex flex-column h-100" id="project-card-ideal-fallback">
+                    <div class="project-img-container mb-3">
+                        <div id="carouselIdealFallback" class="carousel slide h-100" data-bs-ride="carousel">
+                            <div class="carousel-inner h-100">
+                                <div class="carousel-item active h-100">
+                                    <img src="{% static 'images/proj_ideal_1.png' %}" alt="Ideal Classes Dashboard Preview" class="project-img d-block w-100 h-100" style="object-fit: cover;">
+                                </div>
+                                <div class="carousel-item h-100">
+                                    <img src="{% static 'images/proj_ideal_2.png' %}" alt="Ideal Classes Admissions Preview" class="project-img d-block w-100 h-100" style="object-fit: cover;">
+                                </div>
+                                <div class="carousel-item h-100">
+                                    <img src="{% static 'images/proj_ideal_3.png' %}" alt="Ideal Classes Manage Notes Preview" class="project-img d-block w-100 h-100" style="object-fit: cover;">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselIdealFallback" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselIdealFallback" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <h4 class="fw-bold font-heading mb-2">Ideal Classes – E-learning Portal</h4>
+                    <p class="text-muted small flex-grow-1">A comprehensive student-coaching dashboard. Supports video lectures streaming, downloadable notes catalogs, fee record tables, role-based student and instructor access, and optimized responsive tables.</p>
+                    <div class="tech-badges-list">
+                        <span class="tech-badge">Django</span>
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">MySQL</span>
+                        <span class="tech-badge">Bootstrap 5</span>
+                    </div>
+                    <div class="d-flex gap-2 mt-auto">
+                        <a href="https://github.com" target="_blank" class="btn-glass py-2 px-3 fs-7 flex-fill text-center justify-content-center" id="project-github-ideal-fallback"><i class="fa-brands fa-github"></i> GitHub</a>
+                        <a href="https://ideal-classes.onrender.com" target="_blank" class="btn-premium py-2 px-3 fs-7 flex-fill text-center justify-content-center" id="project-demo-ideal-fallback"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4 reveal">
+                <div class="glass-card project-card d-flex flex-column h-100" id="project-card-amazon-fallback">
+                    <div class="project-img-container mb-3">
+                        <div id="carouselAmazonFallback" class="carousel slide h-100" data-bs-ride="carousel">
+                            <div class="carousel-inner h-100">
+                                <div class="carousel-item active h-100">
+                                    <img src="{% static 'images/proj_amazon_1.png' %}" alt="Amazon Clone Header Preview" class="project-img d-block w-100 h-100" style="object-fit: cover;">
+                                </div>
+                                <div class="carousel-item h-100">
+                                    <img src="{% static 'images/proj_amazon_2.png' %}" alt="Amazon Clone Footer Preview" class="project-img d-block w-100 h-100" style="object-fit: cover;">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselAmazonFallback" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselAmazonFallback" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <h4 class="fw-bold font-heading mb-2">Amazon Homepage Clone</h4>
+                    <p class="text-muted small flex-grow-1">Created a responsive Amazon storefront layout using HTML, CSS grid systems, and custom vanilla JavaScript carousel structures. Enhanced interactive item hover cards and shopping header options.</p>
+                    <div class="tech-badges-list">
+                        <span class="tech-badge">HTML5</span>
+                        <span class="tech-badge">CSS3</span>
+                        <span class="tech-badge">JavaScript</span>
+                    </div>
+                    <div class="d-flex gap-2 mt-auto">
+                        <a href="https://github.com" target="_blank" class="btn-glass py-2 px-3 fs-7 flex-fill text-center justify-content-center" id="project-github-amazon-fallback"><i class="fa-brands fa-github"></i> GitHub</a>
+                        <a href="https://github.com" target="_blank" class="btn-premium py-2 px-3 fs-7 flex-fill text-center justify-content-center" id="project-demo-amazon-fallback"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================
+     6. EDUCATION SECTION
+     ========================================== -->
+<section id="education">
+    <div class="container">
+        <div class="section-title reveal">
+            <h5 class="text-uppercase text-gradient fw-bold">My Journey</h5>
+            <h2>Education</h2>
+            <div class="w-100 d-flex justify-content-center"><hr style="width: 60px; height: 4px; background: var(--gradient-primary); border: none; border-radius: 2px;"></div>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-8 reveal">
+                <div class="timeline">
+                    <!-- B.Tech -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-date">2022 – 2026 (Pursuing)</div>
+                        <h4 class="timeline-title fw-bold">B.Tech in Computer Science</h4>
+                        <div class="timeline-subtitle">Chhatrapati Shivaji Maharaj University</div>
+                        <p class="text-muted small mb-2">Studying advanced computational algorithms, data structures, backend engineering, software planning, and database modeling concepts.</p>
+                        <span class="timeline-grade fw-semibold">SGPA: 8.66</span>
+                    </div>
+                    
+                    <!-- HSC -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-date">2020 – 2022</div>
+                        <h4 class="timeline-title fw-bold">Higher Secondary Certificate (HSC)</h4>
+                        <div class="timeline-subtitle">Sarvajanik Vidyamandir, Pen</div>
+                        <p class="text-muted small mb-2">Major focused on Science Stream modules. Strengthened base parameters in Physics, Chemistry, and Advanced Mathematics.</p>
+                        <span class="timeline-grade fw-semibold">Percentage: 62.40%</span>
+                    </div>
+                    
+                    <!-- SSC -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-date">2020</div>
+                        <h4 class="timeline-title fw-bold">Secondary School Certificate (SSC)</h4>
+                        <div class="timeline-subtitle">Sau Manoramabai Narayan Nene Kanya Vidyalay, Pen</div>
+                        <p class="text-muted small mb-2">Completed general secondary education with strong fundamentals in Mathematics, Science, and languages.</p>
+                        <span class="timeline-grade fw-semibold">Percentage: 86.40%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================
+     7. CERTIFICATIONS SECTION
+     ========================================== -->
+<section id="certifications" style="background: rgba(4, 6, 18, 0.45); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+        <div class="section-title reveal">
+            <h5 class="text-uppercase text-gradient fw-bold">Validations</h5>
+            <h2>Certifications</h2>
+            <div class="w-100 d-flex justify-content-center"><hr style="width: 60px; height: 4px; background: var(--gradient-primary); border: none; border-radius: 2px;"></div>
+        </div>
+        
+        <div class="row g-4 justify-content-center">
+            <!-- Cert 1 -->
+            <div class="col-md-6 col-lg-5 reveal">
+                <div class="glass-card text-center d-flex flex-column align-items-center h-100">
+                    <div class="service-icon-box" style="width:50px; height:50px; font-size:1.2rem; margin-bottom:1rem;">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <h5 class="fw-bold mb-2">Full Stack Development Internship</h5>
+                    <p class="text-gradient fw-bold small mb-2">InLighnx</p>
+                    <p class="text-muted small mb-0">Completed structured project sprints. Configured custom databases, connected RESTful API controllers, and optimized user experience rendering parameters under strict timelines.</p>
+                </div>
+            </div>
+            
+            <!-- Cert 2 -->
+            <div class="col-md-6 col-lg-5 reveal">
+                <div class="glass-card text-center d-flex flex-column align-items-center h-100">
+                    <div class="service-icon-box" style="width:50px; height:50px; font-size:1.2rem; margin-bottom:1rem;">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <h5 class="fw-bold mb-2">Full Stack Development Course</h5>
+                    <p class="text-gradient fw-bold small mb-2">Quastech</p>
+                    <p class="text-muted small mb-0">Rigorous coursework addressing Python, Django models/views configurations, database tables engineering, CSS visual hierarchies, and asynchronous JavaScript logic.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================
+     8. RESUME SECTION
+     ========================================== -->
+<section id="resume">
+    <div class="container">
+        <div class="section-title reveal">
+            <h5 class="text-uppercase text-gradient fw-bold">My Credentials</h5>
+            <h2>Resume</h2>
+            <div class="w-100 d-flex justify-content-center"><hr style="width: 60px; height: 4px; background: var(--gradient-primary); border: none; border-radius: 2px;"></div>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6 reveal">
+                <div class="glass-card resume-preview-card">
+                    <div class="resume-icon-glowing"><i class="fa-regular fa-file-pdf"></i></div>
+                    <h4 class="fw-bold mb-2">Siddhi Thale - Full Resume</h4>
+                    <p class="text-muted small mb-4">View and download my detailed professional resume outlining my technical proficiencies, completed modules, projects, and work timeline history.</p>
+                    <a href="{% static 'resume/siddhi_thale_resume.pdf' %}" download="Siddhi_Thale_Resume.pdf" target="_blank" class="btn-premium" id="resume-btn-download">
+                        <i class="fa-solid fa-download"></i> Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================
+     9. CONTACT SECTION
+     ========================================== -->
+<section id="contact" style="border-top: 1px solid var(--border-color);">
+    <div class="container">
+        <div class="section-title reveal">
+            <h5 class="text-uppercase text-gradient fw-bold">Get In Touch</h5>
+            <h2>Let's Build Something Amazing Together</h2>
+            <p>Open for freelance projects, internships, collaborations, and full-time opportunities.</p>
+            <div class="w-100 d-flex justify-content-center"><hr style="width: 60px; height: 4px; background: var(--gradient-primary); border: none; border-radius: 2px;"></div>
+        </div>
+        
+        <div class="row g-4">
+            <!-- Contact Info -->
+            <div class="col-lg-5 reveal">
+                <div class="glass-card h-100 d-flex flex-column justify-content-center">
+                    <h3 class="fw-bold font-heading mb-3">Contact Information</h3>
+                    <p class="text-muted small mb-4">Have an idea for a business website, custom dashboard, or e-commerce solution? Contact me using the fields or write directly through these communication channels.</p>
+                    
+                    <ul class="contact-info-list">
+                        <li class="contact-info-item">
+                            <div class="contact-info-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <small class="text-muted d-block">Email Me</small>
+                                <a href="mailto:siddhithale01@gmail.com" class="fw-bold fs-7 hover-light" id="contact-info-email">siddhithale01@gmail.com</a>
+                            </div>
+                        </li>
+                        <li class="contact-info-item">
+                            <div class="contact-info-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div>
+                                <small class="text-muted d-block">Call Me</small>
+                                <a href="tel:+917020789219" class="fw-bold fs-7 hover-light" id="contact-info-phone">+91 7020789219</a>
+                            </div>
+                        </li>
+                        <li class="contact-info-item">
+                            <div class="contact-info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div>
+                                <small class="text-muted d-block">Location</small>
+                                <span class="fw-bold fs-7" id="contact-info-location">Maharashtra, India</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Contact Form -->
+            <div class="col-lg-7 reveal">
+                <div class="glass-card">
+                    <h3 class="fw-bold font-heading mb-4">Send a Message</h3>
+                    
+                    <!-- Fallback feedback banners for standard requests -->
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-{% if message.tags == 'error' %}danger{% else %}{{ message.tags }}{% endif %} alert-dismissible fade show" role="alert">
+                                {{ message }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                    
+                    <form action="{% url 'portfolio:contact_submit' %}" method="POST" id="portfolio-contact-form">
+                        {% csrf_token %}
+                        
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="{{ contact_form.name.id_for_label }}" class="form-label small text-muted">Name</label>
+                                {{ contact_form.name }}
+                                {% if contact_form.name.errors %}
+                                    <div class="text-danger small mt-1">{{ contact_form.name.errors|first }}</div>
+                                {% endif %}
+                            </div>
+                            <div class="col-md-6">
+                                <label for="{{ contact_form.email.id_for_label }}" class="form-label small text-muted">Email</label>
+                                {{ contact_form.email }}
+                                {% if contact_form.email.errors %}
+                                    <div class="text-danger small mt-1">{{ contact_form.email.errors|first }}</div>
+                                {% endif %}
+                            </div>
+                            <div class="col-12">
+                                <label for="{{ contact_form.subject.id_for_label }}" class="form-label small text-muted">Subject</label>
+                                {{ contact_form.subject }}
+                                {% if contact_form.subject.errors %}
+                                    <div class="text-danger small mt-1">{{ contact_form.subject.errors|first }}</div>
+                                {% endif %}
+                            </div>
+                            <div class="col-12">
+                                <label for="{{ contact_form.message.id_for_label }}" class="form-label small text-muted">Message</label>
+                                {{ contact_form.message }}
+                                {% if contact_form.message.errors %}
+                                    <div class="text-danger small mt-1">{{ contact_form.message.errors|first }}</div>
+                                {% endif %}
+                            </div>
+                            
+                            <div class="col-12 text-end">
+                                <button type="submit" class="btn-premium px-4 mt-2" id="contact-form-submit">
+                                    <i class="fa-solid fa-paper-plane"></i> Send Message
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    
+                    <!-- Dynamic feedback display container for AJAX actions -->
+                    <div id="form-response" class="form-response-alert mt-4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
