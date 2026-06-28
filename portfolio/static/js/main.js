@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 formResponseAlert.style.display = 'block';
                 formResponseAlert.className = 'form-response-alert alert-danger mt-4';
-                formResponseAlert.innerHTML = '<i class="fas fa-exclamation-circle me-2"></i> An unexpected connection error occurred. Please try again.';
             });
+        });
     }
 });
