@@ -6,20 +6,20 @@
     --bg-card: #262F3D;   /* Card Background (Custom Slate-Gray) */
     --bg-card-hover: #2E3A4B;
     --border-color: #374151; /* Border Color (Slate 700) */
-    --border-color-hover: #4F46E5;
+    --border-color-hover: #EC4899;
     
     --text-main: #F9FAFB;  /* Light Gray Text (Gray 50) */
     --text-muted: #9CA3AF; /* Muted Gray Text (Gray 400) */
     
     /* Accents */
-    --accent-indigo: #4F46E5; /* Primary Accent (Indigo 600) */
-    --accent-purple: #6366F1; /* Secondary Accent (Indigo 500) */
-    --accent-blue: #6366F1;
+    --accent-indigo: #EC4899; /* Primary Accent (Pink 500) */
+    --accent-purple: #F43F5E; /* Secondary Accent (Rose 500) */
+    --accent-blue: #F472B6;   /* Light Accent Pink */
     --accent-emerald: #10B981;
     
     /* Gradients (redefined as solid colors for compatibility) */
-    --gradient-primary: linear-gradient(to right, #4F46E5, #4F46E5);
-    --gradient-hover: linear-gradient(to right, #6366F1, #6366F1);
+    --gradient-primary: linear-gradient(to right, #EC4899, #EC4899);
+    --gradient-hover: linear-gradient(to right, #F43F5E, #F43F5E);
     
     --font-heading: 'Poppins', sans-serif;
     --font-body: 'Inter', sans-serif;
