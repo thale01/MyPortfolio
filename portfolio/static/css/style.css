@@ -1,25 +1,31 @@
 /* Siddhi Thale Portfolio - Clean Matte Design System */
 
 :root {
-    --bg-darker: #111827; /* Main Background (Slate 900) */
-    --bg-dark: #1F2937;   /* Alternate Section Background (Slate 800) */
-    --bg-card: #262F3D;   /* Card Background (Custom Slate-Gray) */
-    --bg-card-hover: #2E3A4B;
-    --border-color: #374151; /* Border Color (Slate 700) */
-    --border-color-hover: #EC4899;
+    --bg-darker: #2B2328; /* Main Background (Matte Dark Plum) */
+    --bg-dark: #3A2F35;   /* Alternate Section Background (Dusty Mauve) */
+    --bg-card: #4A3940;   /* Card Background (Soft Rose Brown) */
+    --bg-card-hover: #5B4751; /* Card Hover Background (Lighter Soft Rose Brown) */
+    --border-color: #6B5560; /* Border Color (Muted Mauve) */
+    --border-color-hover: #C98CA0; /* Border Hover (Dusty Pink / Primary Accent) */
     
-    --text-main: #F9FAFB;  /* Light Gray Text (Gray 50) */
-    --text-muted: #9CA3AF; /* Muted Gray Text (Gray 400) */
+    --text-main: #D6C6CC;  /* Normal Text (Soft Gray Pink) */
+    --text-muted: #9C8D93; /* Muted Gray Pink Text */
+    --text-heading: #F2E8EA; /* Headings Text (Warm Ivory) */
     
     /* Accents */
-    --accent-indigo: #EC4899; /* Primary Accent (Pink 500) */
-    --accent-purple: #F43F5E; /* Secondary Accent (Rose 500) */
-    --accent-blue: #F472B6;   /* Light Accent Pink */
-    --accent-emerald: #10B981;
+    --accent-indigo: #C98CA0; /* Primary Accent (Dusty Pink) */
+    --accent-purple: #D69AAE; /* Secondary Accent (Muted Pink) */
+    --accent-blue: #E2A9BA;   /* Light Accent Pink (Rose Pink) */
+    --accent-emerald: #10B981; /* Standard emerald for success states */
     
-    /* Gradients (redefined as solid colors for compatibility) */
-    --gradient-primary: linear-gradient(to right, #EC4899, #EC4899);
-    --gradient-hover: linear-gradient(to right, #F43F5E, #F43F5E);
+    /* Buttons */
+    --btn-bg: #D69AAE; /* Button background (Muted Pink) */
+    --btn-hover-bg: #E2A9BA; /* Button hover background (Rose Pink) */
+    --btn-text: #2B2328; /* Button text color (Matte Dark Plum for contrast) */
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(to right, #C98CA0, #D69AAE);
+    --gradient-hover: linear-gradient(to right, #D69AAE, #E2A9BA);
     
     --font-heading: 'Poppins', sans-serif;
     --font-body: 'Inter', sans-serif;
@@ -54,8 +60,8 @@ body {
 
 /* Selection and Custom Scrollbar */
 ::selection {
-    background: rgba(79, 70, 229, 0.3);
-    color: var(--text-main);
+    background: rgba(201, 140, 160, 0.3);
+    color: var(--text-heading);
 }
 
 ::-webkit-scrollbar {
@@ -78,7 +84,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     font-weight: 700;
     letter-spacing: -0.02em;
-    color: var(--text-main);
+    color: var(--text-heading);
 }
 
 a {
@@ -143,8 +149,8 @@ a {
 
 /* Matte Buttons */
 .btn-premium {
-    background: var(--accent-indigo);
-    color: var(--text-main) !important;
+    background: var(--btn-bg);
+    color: var(--btn-text) !important;
     font-weight: 600;
     border: none;
     border-radius: 12px;
@@ -157,7 +163,7 @@ a {
     gap: 0.5rem;
 }
 .btn-premium:hover {
-    background: var(--accent-purple);
+    background: var(--btn-hover-bg);
     transform: translateY(-2px);
     box-shadow: none;
 }
@@ -247,7 +253,7 @@ section {
 
 /* Navigation Bar */
 .navbar-custom {
-    background: rgba(17, 24, 39, 0.9);
+    background: rgba(43, 35, 40, 0.9);
     border-bottom: 1px solid var(--border-color);
     padding: 1rem 0;
     transition: var(--transition-smooth);
@@ -255,13 +261,13 @@ section {
 }
 .navbar-custom.navbar-scrolled {
     padding: 0.6rem 0;
-    background: #111827;
+    background: var(--bg-darker);
 }
 .navbar-custom .navbar-brand {
     font-family: var(--font-heading);
     font-weight: 800;
     font-size: 1.5rem;
-    color: var(--text-main);
+    color: var(--text-heading);
 }
 .navbar-custom .navbar-brand i {
     color: var(--accent-indigo);
@@ -276,7 +282,7 @@ section {
 }
 .navbar-custom .nav-link:hover,
 .navbar-custom .nav-link.active {
-    color: var(--text-main);
+    color: var(--text-heading);
     background: rgba(255, 255, 255, 0.05);
 }
 .navbar-toggler {
@@ -381,10 +387,10 @@ section {
     transition: var(--transition-smooth);
 }
 .social-btn:hover {
-    color: var(--text-main);
+    color: var(--text-heading);
     border-color: var(--accent-indigo);
     transform: translateY(-3px);
-    background: rgba(79, 70, 229, 0.08);
+    background: rgba(201, 140, 160, 0.08);
 }
 
 /* ABOUT SECTION */
@@ -546,9 +552,9 @@ section {
     font-size: 0.75rem;
     font-weight: 500;
     padding: 0.25rem 0.65rem;
-    background: rgba(79, 70, 229, 0.08);
-    border: 1px solid rgba(79, 70, 229, 0.15);
-    color: #a5b4fc;
+    background: rgba(201, 140, 160, 0.08);
+    border: 1px solid rgba(201, 140, 160, 0.15);
+    color: var(--accent-indigo);
     border-radius: 6px;
 }
 
