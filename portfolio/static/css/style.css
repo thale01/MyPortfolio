@@ -282,8 +282,8 @@ section {
 }
 .navbar-custom .nav-link:hover,
 .navbar-custom .nav-link.active {
-    color: var(--text-heading);
-    background: rgba(255, 255, 255, 0.05);
+    color: var(--accent-indigo) !important;
+    background: rgba(201, 140, 160, 0.05);
 }
 .navbar-toggler {
     border: 1px solid var(--border-color);

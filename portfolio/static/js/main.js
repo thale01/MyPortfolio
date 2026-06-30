@@ -214,4 +214,20 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+    
+    // ==========================================
+    // 8. Mobile Navbar Auto-Collapse on Link Click
+    // ==========================================
+    const navLinks = document.querySelectorAll('.navbar-custom .nav-link');
+    const menuToggle = document.getElementById('navbarContent');
+    if (menuToggle && window.bootstrap) {
+        const bsCollapse = window.bootstrap.Collapse.getOrCreateInstance(menuToggle, { toggle: false });
+        navLinks.forEach((link) => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 992 && menuToggle.classList.contains('show')) {
+                    bsCollapse.hide();
+                }
+            });
+        });
+    }
 });
