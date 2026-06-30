@@ -211,7 +211,7 @@ def create_resume():
     
     edu_data = [
         [
-            Paragraph("<b>Chhatrapati Shivaji Maharaj University, Panvel</b><br/>B.Tech in Computer Science &mdash; SGPA: 8.66 (7th SEM)", body_style),
+            Paragraph("<b>Chhatrapati Shivaji Maharaj University, Panvel</b><br/>B.Tech in Computer Science &mdash; SGPA: 8.66 (7th SEM) | CGPA: 8.09", body_style),
             Paragraph("<b>2022 &ndash; 2026</b>", ParagraphStyle('EduDate1', parent=body_style, alignment=TA_RIGHT))
         ],
         [
