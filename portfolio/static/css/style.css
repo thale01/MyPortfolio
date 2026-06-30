@@ -301,7 +301,7 @@ section {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding-top: 8rem;
+    padding-top: 4rem;
     padding-bottom: 4rem;
 }
 .home-content {
@@ -857,7 +857,7 @@ footer .developer-brand {
 @media (max-width: 991px) {
     #home {
         text-align: center;
-        padding-top: 7rem;
+        padding-top: 3rem;
     }
     .home-img-wrapper {
         margin-top: 3rem;
