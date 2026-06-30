@@ -224,7 +224,6 @@ a {
 section {
     padding: 7rem 0; /* Generous spacing */
     position: relative;
-    z-index: 1;
 }
 
 /* Alternating Section Backgrounds */
@@ -823,6 +822,32 @@ section {
     border-color: var(--accent-indigo);
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
     color: var(--text-main);
+}
+
+/* Full-page Interactive Cursor Spotlight */
+.cursor-spotlight {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 1;
+    background: transparent;
+    transition: opacity 0.5s ease;
+}
+
+/* Position section containers and footer above the spotlight */
+section .container, footer .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Disable on mobile/tablet devices for performance */
+@media (max-width: 991px) {
+    .cursor-spotlight {
+        display: none !important;
+    }
 }
 
 /* FOOTER */

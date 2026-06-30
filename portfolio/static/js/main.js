@@ -230,4 +230,45 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // ==========================================
+    // 9. Interactive Cursor Spotlight Effect
+    // ==========================================
+    const spotlight = document.getElementById('cursor-spotlight');
+    if (spotlight && window.innerWidth >= 992) {
+        let mouseX = window.innerWidth / 2;
+        let mouseY = window.innerHeight / 2;
+        let currentX = mouseX;
+        let currentY = mouseY;
+        let isMoving = false;
+        
+        // Track mouse movement
+        window.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            
+            if (!isMoving) {
+                isMoving = true;
+                // Fade in spotlight when mouse first moves
+                spotlight.style.opacity = '1';
+            }
+        });
+        
+        // Lerp animation loop for smooth 60 FPS interpolation
+        const updateSpotlight = () => {
+            // Lerp formula: current = current + (target - current) * easing
+            currentX += (mouseX - currentX) * 0.08;
+            currentY += (mouseY - currentY) * 0.08;
+            
+            spotlight.style.background = `radial-gradient(650px circle at ${currentX}px ${currentY}px, rgba(255, 245, 250, 0.12) 0%, rgba(255, 210, 230, 0.06) 40%, transparent 80%)`;
+            
+            requestAnimationFrame(updateSpotlight);
+        };
+        
+        // Start animation loop
+        requestAnimationFrame(updateSpotlight);
+        
+        // Initially set opacity to 0 until mouse move is detected
+        spotlight.style.opacity = '0';
+    }
 });
